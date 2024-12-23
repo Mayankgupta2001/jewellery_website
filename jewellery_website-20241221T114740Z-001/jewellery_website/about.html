@@ -1,0 +1,405 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>about-us</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&family=Updock&display=swap');
+            @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+        </style>   
+        <style>
+            .about_img figure {
+                position: relative;
+            }
+            .about_img figure::before {
+                position: absolute;
+                top: 0;
+                left: -75%;
+                z-index: 2;
+                display: block;
+                content: '';
+                width: 50%;
+                height: 100%;
+                background: -webkit-linear-gradient(left, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+                background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+                -webkit-transform: skewX(-25deg);
+                transform: skewX(-25deg);
+                
+            }
+            .about_img::-webkit-scrollbar{
+                display: none !important;
+                overflow:hidden;
+            }
+            .about_img figure:hover::before {
+                -webkit-animation: shine .75s;
+                animation: shine .75s;
+            }
+            @-webkit-keyframes shine {
+                100% {
+                    left: 125%;
+                }
+            }
+            @keyframes shine {
+                100% {
+                    left: 125%;
+                }
+            }  
+            .service{
+              overflow: hidden;   
+
+            }
+            
+            .service img{
+              transform: scale(1.0);
+            }
+            .service img:hover{
+              transform: scale(1.1);
+              transition: 1s linear;
+            }
+            
+            .service1 {
+            height: 100px ;
+            background-color: #ffff;
+            box-shadow: 0px 10px 12px -7px black;
+            position: relative; 
+            bottom: 60px;
+            right: 6px;
+            width: 80%; 
+            border-radius: 20px;    
+            transition: all 1s linear;
+          }
+          
+          .service1:hover{
+             transform:translateY(10px);
+
+            }
+            
+          .service1 a:hover{
+            color: #e4a6a6  !important;
+
+            }
+        </style>
+    </head>
+    <body>
+        <!-- navbar start -->
+        <div class="top-bar">
+        <div class="container-fluid">
+           <div class="row">
+               <div class="col"> 15% OFF+ FREE JEWELRY BOX ON ORDERS ABOVE $200</div>
+               <div class="col">Monday-Friday:10AM-8PM</div>
+            </div>
+        </div>
+        </div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-white">
+           <div class="container">
+               <a class="navbar-brand" href="#"> <img class="pb-1 pe-2" src="/img/yurman-logo.svg" alt=""> </a>
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarNav">
+                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                       <li class="nav-item">
+                           <a class="nav-link" href="index.html">Home</a>
+                       </li>
+                       <li class="nav-item dropdown">
+                           <a class="nav-link dropdown-toggle" href="#" id="shopDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                               Categories
+                           </a>
+                           <ul class="dropdown-menu" aria-labelledby="shopDropdown">
+                               <li><a class="dropdown-item" href="#">Necklaces</a></li>
+                               <li><a class="dropdown-item" href="#">Bracelets</a></li>
+                               <li><a class="dropdown-item" href="#">Rings</a></li>
+                           </ul>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link" href="shop.html">Gold</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link" href="#">Silver</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link" href="#">Diamond</a>
+                       </li>
+                       <li class="nav-item">
+                         <a class="nav-link" href="review.html">Reviews</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link" href="about.html">About Us</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link" href="contact.html">Contact Us</a>
+                       </li>
+                   </ul>
+                   <div class="d-flex">
+                       <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="bi bi-search"></i></a>
+                       <a href="#" class="nav-link"><i class="bi bi-person"></i></a>
+                       <a href="#" class="nav-link"><i class="bi bi-heart"></i></a>
+                       <a href="#" class="nav-link"><i class="bi bi-bag"></i></a>
+                   </div>
+               </div>
+           </div>
+        </nav>
+   
+        <!-- Search Modal -->
+        <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+           <div class="modal-dialog modal-dialog-centered">
+               <div class="modal-content">
+                   <div class="modal-header">
+                       <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                   </div>
+                   <div class="modal-body">
+                       <form>
+                           <div class="input-group mb-3">
+                               <input type="text" class="form-control" placeholder="Search for products..." aria-label="Search" aria-describedby="button-search">
+                               <button class="btn btn-outline-secondary" type="button" id="button-search">Search</button>
+                           </div>
+                       </form>
+                   </div>
+               </div>
+           </div>
+        </div>
+   
+        <!-- navbar end -->
+
+        <!-- slider image -->
+        <div class="container-fluid gx-0">
+        <div class="imgbox">
+            <img   src="/img/slider.jpg" alt="" width="100%">
+        </div>
+        <div class="breadcrumbox">
+            <h1 class="breadbox1" style="font-family:Playfair Display ; font-style: italic; font-size: 50px; text-align: left;">About Us</h1>
+            <h6 class="breadbox2" style="font-family: Hanken Grotesk; text-align: left;">Home > About</h6>
+        </div>
+        </div><br><br><br>
+
+        <!-- main part -->
+        <div class="container">
+            <p style="font-size: 40px; border-bottom: 2px solid black; width:120px ;">About</p>
+            <h2 style="font-size:70px; font-weight: 600px; line-height: 80px; color: #000000;">Every diamond tells a story</h2>
+        </div>
+        <div class="container-fluid">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6 mt-5">
+                     <h2 style="font-size: 24px; line-height: 45px;">Our Vision </h2>
+                     <p style="text-align:justify; border-bottom: 2px solid black;padding-bottom: 50px;">Our vision is to lead the diamond industry with exceptional craftsmanship, advanced technology, and ethical practices, creating timeless pieces of unmatched quality to inspire beauty and integrity</p>
+                     <h2 style="font-size: 24px; line-height: 45px;margin-top: 30px;">Our Mission</h2>
+                     <p style="text-align:justify;">Our mission is to craft exquisite diamonds with precision and ethical integrity, setting industry standards for quality and innovation beauty and lasting value to our customers lasting value to our customers</p>
+                    </div>
+                    <div class="col-lg-6 mt-3">               
+                        <div class="about_img column">
+                            <figure><img src="https://themetechmount.com/crysto/wp-content/uploads/2024/05/col-02.jpg" alt="diamond" width="100%" height="380px" style="border-radius:20px 20px 20px 20px;"/>  </figure>
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="container-fluid">
+            <div class="container">
+                <div class=" text-center mt-5"> <h3>Our incredible projects</h3></div>
+                <div class=" text-center mt-2"> <h6>You Will Like To Look Like Goddes Every Day!</h6></div><br>
+                <div class="row">
+                    <div class="col-lg-3 col-md-6 col-sm-12 mt-2">
+                        <div  class="service">
+                        <img src="https://themetechmount.com/crysto/wp-content/uploads/2024/05/port-02-610x750.png" height="auto" width="100%" > 
+                            <div class="service1 ms-5">
+                                    <div class="text-center pt-4">
+                                        <h4 class="text">Diamond Polishing</h4>
+                                    </div>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 mt-2">
+                        <div  class="service">
+                        <img src="https://themetechmount.com/crysto/wp-content/uploads/2024/05/port-05-610x750.png" height="auto" width="100%" > 
+                            <div class="service1 ms-5">
+                                    <div class="text-center pt-4">
+                                        <h4>Diamond Cutting</h4>
+                                    </div>
+                            </div>
+                        </div>  
+                    </div>  
+                    <div class="col-lg-3 col-md-6 col-sm-12 mt-2">
+                        <div  class="service">
+                        <img src="https://themetechmount.com/crysto/wp-content/uploads/2024/05/port-04-610x750.png" height="auto" width="100%" > 
+                            <div class="service1 ms-5">
+                                    <div class="text-center pt-4">
+                                        <h4>Diamond processing</h4>
+                                    </div>
+                            </div>
+                        </div>  
+                    </div>
+                    <div class="col-lg-3 col-md-6 col-sm-12 mt-2">
+                        <div  class="service">
+                        <img src="https://themetechmount.com/crysto/wp-content/uploads/2024/05/blog-01-610x750.jpg" height="auto" width="100%" > 
+                            <div class="service1 ms-5">
+                                    <div class="text-center pt-4">
+                                        <h4>Diamond exploration</h4>
+                                    </div>
+                            </div>
+                        </div>  
+                    </div>  
+                </div>
+            </div>
+        </div>
+
+        <!-- our partner -->
+        <div class="container-fluid">
+            <div class="container pt-5 pb-5 mt-5">
+                <h1 style="letter-spacing: 5px; font-family:playfair display ; text-align: center;">OUR PARTNERS</h1>
+                <div class="row pt-4 pb-4">
+                    <div class="col-lg-2 col-sm-12 col-md-6 text-center mt-4">
+                        <div class="logobox">
+                            <img src="/img/1.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-12 col-md-6 text-center mt-4">
+                        <div class="logobox">
+                            <img src="/img/2.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-12 col-md-6 text-center mt-4">
+                        <div class="logobox">
+                            <img src="/img/3.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-12 col-md-6 text-center mt-4">
+                        <div class="logobox">
+                            <img src="/img/4.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-12 col-md-6 text-center mt-4">
+                        <div class="logobox">
+                            <img src="/img/5.jpg" alt="">
+                        </div>
+                    </div>
+                    <div class="col-lg-2 col-sm-12 col-md-6 text-center mt-4">
+                        <div class="logobox">
+                            <img src="/img/6.jpg" alt="">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <!-- footer -->
+    <footer class="footer" style="background-color: rgb(28,27,25);color:#fff">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12   justify-content-center">
+                    <h5 ><img class="" data-src="https://enovathemes.com/joice/wp-content/uploads/logo.svg" src="https://enovathemes.com/joice/wp-content/uploads/logo.svg" class="img-fluid" width="134" height="32" alt="Joice Jewelry Store"></h5>
+                    <p>Unleash the radiance of your inner beauty with our premium jewelry brand - a perfect blend of sophistication and style.</p>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 col-sm-12   justify-content-center">
+                    <h5>CATALOG</h5>
+                    <ul>
+                        <li><a href="#">Shop by category</a></li>
+                        <li><a href="#">Shop by brand</a></li>
+                        <li><a href="#">Promotions</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12   justify-content-center">
+                    <h5>
+                        HELP
+                       </h5>
+                       <ul>
+                        <li>
+                         <a href="#">
+                          Features
+                         </a>
+                        </li>
+                        <li>
+                         <a href="#">
+                          FAQ
+                         </a>
+                        </li>
+                        <li>
+                         <a href="#">
+                          About us
+                         </a>
+                        </li>
+                        <li>
+                         <a href="#">
+                          Contact us
+                         </a>
+                        </li>
+                       </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12   justify-content-center">
+                    <h5>CONTACT US</h5>
+                    <p><i style="color: #c9a236;" class="fas fa-map-marker-alt"></i> 1234 Main St, City, State, Country</p>
+                    <p><i style="color: #c9a236;" class="fas fa-phone"></i> Call us 8 AM - 10 PM<br>1234 5678 9012</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>&copy; 2024 Brand Name. All Rights Reserved</p>
+                </div>
+                
+                <div class="col-lg-6">
+                <div class="text-end">
+                    <a href="#">Terms of use</a> | 
+                    <a href="#">Privacy Policy</a> | 
+                    <a href="#">Interest Based Ads</a> | 
+                    <a href="#">Accessibility</a>
+                    
+                </div>
+                </div>
+            </div>
+        </div>
+        </footer>
+    </body>
+
+    <script src="https://kit.fontawesome.com/your-fontawesome-kit-id.js" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <!-- navbar js -->
+    <script>
+    // JavaScript to handle both hover and click for dropdowns
+    document.addEventListener("DOMContentLoaded", function() {
+        var dropdowns = document.querySelectorAll('.dropdown');
+        
+        function toggleDropdown(e) {
+            if (!this.classList.contains('show')) {
+                e.preventDefault();
+                this.classList.add('show');
+                this.querySelector('.dropdown-menu').classList.add('show');
+            } else if (window.innerWidth <= 991) {
+                this.classList.remove('show');
+                this.querySelector('.dropdown-menu').classList.remove('show');
+            }
+        }
+
+        dropdowns.forEach(function(dropdown) {
+            dropdown.addEventListener('mouseenter', toggleDropdown);
+            dropdown.addEventListener('mouseleave', function() {
+                if (window.innerWidth > 991) {
+                    this.classList.remove('show');
+                    this.querySelector('.dropdown-menu').classList.remove('show');
+                }
+            });
+            dropdown.querySelector('.dropdown-toggle').addEventListener('click', toggleDropdown);
+        });
+    });
+    </script>
+</html>

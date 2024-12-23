@@ -1,0 +1,538 @@
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <title>
+   Jewelry Store
+  </title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.1/css/all.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat&display=swap"rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&family=Tangerine:wght@400;700&family=Updock&display=swap');
+    @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap');
+ </style>   
+  <style>
+   
+        .product-card-mg {
+            border: 1px solid #ddd;
+            padding: 15px;
+            margin-bottom: 20px;
+            text-align: center;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            height: 350px;
+            width: 250px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .product-card-mg:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+        .product-card-mg img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .product-card-mg .badge {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+        }
+        .product-card-mg .discount {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: #000;
+            color: #fff;
+            padding: 5px;
+            border-radius: 50%;
+        }
+        .sidebar-mg {
+            border: 1px solid #ddd;
+            padding: 15px;
+            background-color: #f8f9fa;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .sidebar-mg h5 {
+            margin-top: 0;
+        }
+        .sidebar-mg .form-check {
+            margin-bottom: 10px;
+        }
+        .sidebar-mg ul li:hover, .sidebar-mg .form-check-label:hover {
+            color: #c29958;
+            cursor: pointer;
+        }
+  </style>
+ </head>
+ <body>
+    <!-- navbar start -->
+    <div class="top-bar">
+        <div class="container-fluid">
+           <div class="row">
+               <div class="col"> 15% OFF+ FREE JEWELRY BOX ON ORDERS ABOVE $200</div>
+               <div class="col">Monday-Friday:10AM-8PM</div>
+            </div>
+        </div>
+    </div>
+    
+    <nav class="navbar navbar-expand-lg navbar-light bg-white">
+           <div class="container">
+               <a class="navbar-brand" href="#"> <img class="pb-1 pe-2" src="/img/yurman-logo.svg" alt=""> </a>
+               <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                   <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse" id="navbarNav">
+                   <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                       <li class="nav-item">
+                           <a class="nav-link" href="index.html">Home</a>
+                       </li>
+                       <li class="nav-item dropdown">
+                           <a class="nav-link dropdown-toggle" href="#" id="shopDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                               Categories
+                           </a>
+                           <ul class="dropdown-menu" aria-labelledby="shopDropdown">
+                               <li><a class="dropdown-item" href="#">Necklaces</a></li>
+                               <li><a class="dropdown-item" href="#">Bracelets</a></li>
+                               <li><a class="dropdown-item" href="#">Rings</a></li>
+                           </ul>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link" href="shop.html">Gold</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link" href="#">Silver</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link" href="#">Diamond</a>
+                       </li>
+                       <li class="nav-item">
+                         <a class="nav-link" href="review.html">Reviews</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link" href="about.html">About Us</a>
+                       </li>
+                       <li class="nav-item">
+                           <a class="nav-link" href="contact.html">Contact Us</a>
+                       </li>
+                   </ul>
+                   <div class="d-flex">
+                       <a href="#" class="nav-link" data-bs-toggle="modal" data-bs-target="#searchModal"><i class="bi bi-search"></i></a>
+                       <a href="#" class="nav-link"><i class="bi bi-person"></i></a>
+                       <a href="#" class="nav-link"><i class="bi bi-heart"></i></a>
+                       <a href="#" class="nav-link"><i class="bi bi-bag"></i></a>
+                   </div>
+               </div>
+           </div>
+    </nav>
+   
+    <!-- Search Modal -->
+    <div class="modal fade" id="searchModal" tabindex="-1" aria-labelledby="searchModalLabel" aria-hidden="true">
+           <div class="modal-dialog modal-dialog-centered">
+               <div class="modal-content">
+                   <div class="modal-header">
+                       <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                       <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                   </div>
+                   <div class="modal-body">
+                       <form>
+                           <div class="input-group mb-3">
+                               <input type="text" class="form-control" placeholder="Search for products..." aria-label="Search" aria-describedby="button-search">
+                               <button class="btn btn-outline-secondary" type="button" id="button-search">Search</button>
+                           </div>
+                       </form>
+                   </div>
+               </div>
+           </div>
+    </div>
+   
+     <!-- navbar end -->
+     <div class="container-fluid gx-0">
+        <div class="imgbox">
+            <img   src="/img/slider.jpg" alt="" width="100%">
+        </div>
+        <div class="breadcrumbox">
+            <h1 class="breadbox1" style="font-family:Playfair Display ; font-style: italic; font-size: 50px; text-align: left;">Gold Jewellery</h1>
+            <h6 class="breadbox2" style="font-family: Hanken Grotesk; text-align: left;">Home > Gold</h6>
+        </div>
+     </div><br><br><br><br>
+
+    <!-- main part -->
+    <div class="container mt-5">
+   <div class="row mt-4">
+    <div class="col-md-9">
+     <div class="d-flex justify-content-between align-items-center mb-3">
+     </div>
+     <div class="row">
+      <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+       <div class="product-card-mg position-relative">
+        <span class="badge bg-warning text-dark">
+         New
+        </span>
+        <span class="discount">
+         10%
+        </span>
+        <img alt="Perfect Diamond Jewelry" height="200" src="https://storage.googleapis.com/a1aa/image/Sz7dUGhvcBrMFlLoYllmLK0gdgjyWwlXXrDUf2wqPIoEzUzJA.jpg" width="200"/>
+        <div class="pt-4">
+         <h4>Silver</h4>
+        </div>
+        <div class="mt-2">
+         <span class="dot bg-secondary">
+         </span>
+         <span class="dot bg-secondary">
+         </span>
+         <span class="dot bg-secondary">
+         </span>
+         <span class="dot bg-secondary">
+         </span>
+        </div>
+        <div class="mt-2">
+         <h6>Perfect Diamond Jewelry</h6>
+        </div>
+       </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+       <div class="product-card-mg position-relative">
+        <span class="badge bg-warning text-dark">
+         New
+        </span>
+        <span class="discount">
+         10%
+        </span>
+        <img alt="Handmade Golden Necklace" height="200" src="https://storage.googleapis.com/a1aa/image/G5CMfvWobLQPLKzPcI2rW0RkWx2WJAxeFeeTaxe2vL7TxM1cC.jpg" width="200"/>
+        <div class="pt-4">
+          <h4>Citygold</h4>
+        </div>
+        <div class="mt-2">
+         <span class="dot bg-secondary">
+         </span>
+         <span class="dot bg-secondary">
+         </span>
+         <span class="dot bg-secondary">
+         </span>
+         <span class="dot bg-secondary">
+         </span>
+        </div>
+        <div class="mt-2">
+          <h6>Handmade Golden Necklace</h6>
+        </div>
+       </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+       <div class="product-card-mg position-relative">
+        <span class="badge bg-warning text-dark">
+         New
+        </span>
+        <span class="discount">
+         10%
+        </span>
+        <img alt="Diamond Exclusive Ornament" height="200" src="https://storage.googleapis.com/a1aa/image/NqodwDvCefpOeoEunM9Tnj9UrKUGr7EsP7Yei922BuodYmaOB.jpg" width="200"/>
+        <div class="pt-4">
+          <h4>Quickin</h4>
+        </div>
+        <div class="mt-2">
+         <span class="dot bg-secondary">
+         </span>
+         <span class="dot bg-secondary">
+         </span>
+         <span class="dot bg-secondary">
+         </span>
+         <span class="dot bg-secondary">
+         </span>
+        </div>
+        <div class="mt-2">
+           <h6>Diamond Exclusive Ornament</h6>
+        </div>
+       </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+       <div class="product-card-mg position-relative">
+        <span class="badge bg-warning text-dark">
+         New
+        </span>
+        <span class="discount">
+         10%
+        </span>
+        <img alt="Handmade Golden Necklace" height="200" src="https://storage.googleapis.com/a1aa/image/G5CMfvWobLQPLKzPcI2rW0RkWx2WJAxeFeeTaxe2vL7TxM1cC.jpg" width="200"/>
+        <div class="pt-4">
+          <h4>Platinum</h4>
+        </div>
+        <div class="mt-2">
+         <span class="dot bg-secondary">
+         </span>
+         <span class="dot bg-secondary">
+         </span>
+         <span class="dot bg-secondary">
+         </span>
+         <span class="dot bg-secondary">
+         </span>
+        </div>
+        <div class="mt-2">
+          <h6>Handmade Golden Necklace</h6>
+        </div>
+       </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+       <div class="product-card-mg position-relative">
+        <span class="badge bg-warning text-dark">
+         New
+        </span>
+        <span class="discount">
+         10%
+        </span>
+        <img alt="Perfect Diamond Jewelry" height="200" src="https://storage.googleapis.com/a1aa/image/Sz7dUGhvcBrMFlLoYllmLK0gdgjyWwlXXrDUf2wqPIoEzUzJA.jpg" width="200"/>
+        <div class="pt-4">
+           <h4>HasTech</h4>
+        </div>
+        <div class="mt-2">
+         <span class="dot bg-secondary">
+         </span>
+         <span class="dot bg-secondary">
+         </span>
+         <span class="dot bg-secondary">
+         </span>
+         <span class="dot bg-secondary">
+         </span>
+        </div>
+        <div class="mt-2">
+          <h6>Perfect Diamond Jewelry</h6>
+        </div>
+       </div>
+      </div>
+      <div class="col-lg-4 col-md-6 col-sm-12 d-flex justify-content-center">
+       <div class="product-card-mg position-relative">
+        <span class="badge bg-warning text-dark">
+         New
+        </span>
+        <span class="discount">
+         10%
+        </span>
+        <img alt="Diamond Exclusive Ornament" height="200" src="https://storage.googleapis.com/a1aa/image/NqodwDvCefpOeoEunM9Tnj9UrKUGr7EsP7Yei922BuodYmaOB.jpg" width="200"/>
+        <div class="pt-4">
+          <h4>Jem</h4>
+        </div>
+        <div class="mt-2">
+         <span class="dot bg-secondary">
+         </span>
+         <span class="dot bg-secondary">
+         </span>
+         <span class="dot bg-secondary">
+         </span>
+         <span class="dot bg-secondary">
+         </span>
+        </div>
+        <div class="mt-2">
+          <h6>Diamond Exclusive Ornament</h6>
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+    <div class="col-md-3 mt-3">
+     <div class="sidebar-mg">
+      <h5>
+       Categories <hr>
+      </h5>
+      <ul class="list-unstyled">
+       <li>
+        Fashionware (10)
+       </li>
+       <li>
+        Kitchenware (5)
+       </li>
+       <li>
+        Electronics (8)
+       </li>
+       <li>
+        Accessories (4)
+       </li>
+       <li>
+        Shoe (5)
+       </li>
+       <li>
+        Toys (2)
+       </li>
+      </ul>
+      <h5 class="mt-4">
+       Brand <hr>
+      </h5>
+      <div class="form-check">
+       <input class="form-check-input" id="brand1" type="checkbox" value=""/>
+       <label class="form-check-label" for="brand1">
+        Studio (3)
+       </label>
+      </div>
+      <div class="form-check">
+       <input class="form-check-input" id="brand2" type="checkbox" value=""/>
+       <label class="form-check-label" for="brand2">
+        HasTech (4)
+       </label>
+      </div>
+      <div class="form-check">
+       <input class="form-check-input" id="brand3" type="checkbox" value=""/>
+       <label class="form-check-label" for="brand3">
+        Quickin (15)
+       </label>
+      </div>
+      <div class="form-check">
+       <input class="form-check-input" id="brand4" type="checkbox" value=""/>
+       <label class="form-check-label" for="brand4">
+        Graphic Corner (10)
+       </label>
+      </div>
+      <div class="form-check">
+       <input class="form-check-input" id="brand5" type="checkbox" value=""/>
+       <label class="form-check-label" for="brand5">
+        DevItems (12)
+       </label>
+      </div>
+      <h5 class="mt-4">
+       Color <hr>
+      </h5>
+      <div class="form-check">
+       <input class="form-check-input" id="color1" type="checkbox" value=""/>
+       <label class="form-check-label" for="color1">
+        Black (20)
+       </label>
+      </div>
+      <div class="form-check">
+       <input class="form-check-input" id="color2" type="checkbox" value=""/>
+       <label class="form-check-label" for="color2">
+        Red (6)
+       </label>
+      </div>
+      <div class="form-check">
+       <input class="form-check-input" id="color3" type="checkbox" value=""/>
+       <label class="form-check-label" for="color3">
+        Blue (8)
+       </label>
+      </div>
+      <div class="form-check">
+       <input class="form-check-input" id="color4" type="checkbox" value=""/>
+       <label class="form-check-label" for="color4">
+        Green (5)
+       </label>
+      </div>
+     </div>
+    </div>
+   </div>
+    </div><br>
+
+     <!-- footer -->
+    <footer class="footer" style="background-color: rgb(28,27,25);color:#fff">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-12   justify-content-center">
+                    <h5 ><img class="" data-src="https://enovathemes.com/joice/wp-content/uploads/logo.svg" src="https://enovathemes.com/joice/wp-content/uploads/logo.svg" class="img-fluid" width="134" height="32" alt="Joice Jewelry Store"></h5>
+                    <p>Unleash the radiance of your inner beauty with our premium jewelry brand - a perfect blend of sophistication and style.</p>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 col-sm-12   justify-content-center">
+                    <h5>CATALOG</h5>
+                    <ul>
+                        <li><a href="#">Shop by category</a></li>
+                        <li><a href="#">Shop by brand</a></li>
+                        <li><a href="#">Promotions</a></li>
+                        <li><a href="#">Sitemap</a></li>
+                    </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12   justify-content-center">
+                    <h5>
+                        HELP
+                       </h5>
+                       <ul>
+                        <li>
+                         <a href="#">
+                          Features
+                         </a>
+                        </li>
+                        <li>
+                         <a href="#">
+                          FAQ
+                         </a>
+                        </li>
+                        <li>
+                         <a href="#">
+                          About us
+                         </a>
+                        </li>
+                        <li>
+                         <a href="#">
+                          Contact us
+                         </a>
+                        </li>
+                       </ul>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-12   justify-content-center">
+                    <h5>CONTACT US</h5>
+                    <p><i style="color: #c9a236;" class="fas fa-map-marker-alt"></i> 1234 Main St, City, State, Country</p>
+                    <p><i style="color: #c9a236;" class="fas fa-phone"></i> Call us 8 AM - 10 PM<br>1234 5678 9012</p>
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-telegram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr>
+            <div class="row">
+                <div class="col-lg-6">
+                    <p>&copy; 2024 Brand Name. All Rights Reserved</p>
+                </div>
+                
+                <div class="col-lg-6">
+                <div class="text-end">
+                    <a href="#">Terms of use</a> | 
+                    <a href="#">Privacy Policy</a> | 
+                    <a href="#">Interest Based Ads</a> | 
+                    <a href="#">Accessibility</a>
+                    
+                </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js">
+  </script>
+  <script crossorigin="anonymous" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+3i5d5L5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e5p5yD5e">
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+  <!-- navbar js -->
+ <script>
+    // JavaScript to handle both hover and click for dropdowns
+    document.addEventListener("DOMContentLoaded", function() {
+        var dropdowns = document.querySelectorAll('.dropdown');
+        
+        function toggleDropdown(e) {
+            if (!this.classList.contains('show')) {
+                e.preventDefault();
+                this.classList.add('show');
+                this.querySelector('.dropdown-menu').classList.add('show');
+            } else if (window.innerWidth <= 991) {
+                this.classList.remove('show');
+                this.querySelector('.dropdown-menu').classList.remove('show');
+            }
+        }
+
+        dropdowns.forEach(function(dropdown) {
+            dropdown.addEventListener('mouseenter', toggleDropdown);
+            dropdown.addEventListener('mouseleave', function() {
+                if (window.innerWidth > 991) {
+                    this.classList.remove('show');
+                    this.querySelector('.dropdown-menu').classList.remove('show');
+                }
+            });
+            dropdown.querySelector('.dropdown-toggle').addEventListener('click', toggleDropdown);
+        });
+    });
+ </script>
+</body>
+</html>
